@@ -168,7 +168,11 @@ const utils = {
     localStorage.wordLength = numberOfLetters.value;
   },
   getnumber: function () {
-    numberOfLetters.value = localStorage.wordLength;
+    if (localStorage.wordLength) {
+      numberOfLetters.value = localStorage.wordLength;
+    } else {
+      numberOfLetters.value = 6;
+    }
   },
 };
 
